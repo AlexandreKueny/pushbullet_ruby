@@ -12,7 +12,7 @@ gem 'pushbullet_ruby'
 ### Setup
 Puts your api-key into a token.json file formatted like this:
 ```ruby
-{token: 'your api-key here'}
+{"token": "your api-key here"}
 ```
 And setup your client:
 ```ruby
