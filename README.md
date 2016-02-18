@@ -44,6 +44,10 @@ client.subscriptions
 ```ruby
 client.recent_pushes('channel tag')
 ```
+### List pushes
+```ruby
+client.pushes
+```
 ### Push
 You can send following list:
 

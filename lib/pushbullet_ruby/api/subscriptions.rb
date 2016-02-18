@@ -12,11 +12,9 @@ module PushbulletRuby
       end
 
       def recent_pushes(tag)
-        pushes = []
-        channel_info(tag).body['recent_pushes'].each do |push|
-          pushes << PushbulletRuby::Push.new(push)
+        channel_info(tag).body['recent_pushes'].each_with_object([]) do |push, memo|
+          memo << PushbulletRuby::Push.new(push)
         end
-        pushes
       end
     end
   end

@@ -17,6 +17,10 @@ module PushbulletRuby
       def push_file(receiver: nil, identifier: nil, params: {})
         PushbulletRuby::Pushable::File.push(self, receiver, identifier, params)
       end
+
+      def pushes
+        PushbulletRuby::Push.from_response(get('/v2/pushes'))
+      end
     end
   end
 end
