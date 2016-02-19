@@ -5,9 +5,9 @@ module PushbulletRuby
     attr_reader :body
 
     def self.from_response(response)
-      response.body['subscriptions'].each_with_object([]) do |attributes, memo|
+      response.body['subscriptions'].map do |attributes|
         next unless attributes['active']
-        memo << new(attributes['channel'])
+        new(attributes['channel'])
       end
     end
 

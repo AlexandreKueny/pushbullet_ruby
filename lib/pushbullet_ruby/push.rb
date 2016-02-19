@@ -3,9 +3,9 @@ require 'pushbullet_ruby/entity'
 module PushbulletRuby
   class Push < Entity
     def self.from_response(response)
-      response.body['pushes'].each_with_object([]) do |push, memo|
-        next unless push['active']
-        memo << new(push)
+      response.body['pushes'].map do |attributes|
+        next unless attributes['active']
+        new(attributes)
       end
     end
 
