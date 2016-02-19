@@ -64,6 +64,17 @@ client.push_note(
     }
 )
 ```
+### Sms
+```ruby
+client.sens_sms(
+    user_identifier: 'user id',
+    device_identifier: 'device id',
+    params: {
+        conversation_iden: 'phone number to send to',
+        message: 'Content'
+    }
+)
+```
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/creends/pushbullet_ruby.
