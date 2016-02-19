@@ -70,7 +70,7 @@ client.sens_sms(
     user_identifier: 'user id',
     device_identifier: 'device id',
     params: {
-        conversation_iden: 'phone number to send to',
+        conversation_iden: 'target phone number',
         message: 'Content'
     }
 )
