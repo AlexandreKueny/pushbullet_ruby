@@ -18,7 +18,7 @@ module PushbulletRuby
     end
 
     def push
-      raise MissingParameter unless params.keys.sort == required_parameters.sort
+      raise MissingParameter unless required_parameters.all? { |e| params.keys.include?(e) }
 
       payload = params.merge(type: type)
       payload = specify_receiver(payload)

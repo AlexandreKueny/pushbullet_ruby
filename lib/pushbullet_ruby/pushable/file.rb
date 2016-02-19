@@ -2,7 +2,7 @@ module PushbulletRuby
   class Pushable
     class File < Pushable
       def push
-        raise MissingParameter unless params.keys.sort == required_parameters.sort
+        raise MissingParameter unless required_parameters.all? { |e| params.keys.include?(e) }
 
         file_name = params[:file_name]
         file_path = params[:file_path]

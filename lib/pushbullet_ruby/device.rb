@@ -16,5 +16,9 @@ module PushbulletRuby
     def name
       body['nickname']
     end
+
+    def app_version
+      body['app_version']
+    end
   end
 end

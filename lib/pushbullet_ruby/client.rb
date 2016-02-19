@@ -29,7 +29,7 @@ module PushbulletRuby
           builder: middleware,
           headers: {
               accept: 'application/json',
-              user_agent: 'Pushbullet Gem'
+              user_agent: 'pushbullet_ruby Gem'
           },
           ssl: {
               verify: false
