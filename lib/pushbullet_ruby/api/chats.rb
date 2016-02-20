@@ -12,6 +12,10 @@ module PushbulletRuby
       def delete_chat(chat_id: nil)
         delete("/v2/chats/#{chat_id}").body
       end
+
+      def update_chat(chat_id: nil, params: {})
+        PushbulletRuby::Chat.new(post("/v2/chats/#{chat_id}", params).body)
+      end
     end
   end
 end

@@ -16,6 +16,18 @@ module PushbulletRuby
           memo << PushbulletRuby::Push.new(push)
         end
       end
+
+      def update_subscription(channel_id: nil, params: {})
+        PushbulletRuby::Channel.new(post("/v2/subscriptions/#{channel_id}", params).body)
+      end
+
+      def delete_subscription(channel_id: nil)
+        delete("/v2/subscriptions/#{channel_id}").body
+      end
+
+      def create_subscription(params: {})
+        PushbulletRuby::Channel.new(post('/v2/subscriptions', params))
+      end
     end
   end
 end

@@ -21,6 +21,18 @@ module PushbulletRuby
       def pushes
         PushbulletRuby::Push.from_response(get('/v2/pushes'))
       end
+
+      def update_push(push_id: nil, params: {})
+        PushbulletRuby::Push.new(post("/v2/pushes/#{push_id}", params).body)
+      end
+
+      def delete_push(push_id: nil)
+        delete("/v2/pushes/#{push_id}").body
+      end
+
+      def delete_all_pushes
+        delete('/v2/pushes').body
+      end
     end
   end
 end
