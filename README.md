@@ -22,7 +22,7 @@ client.devices
 ### Update device informations
 ```ruby
 client.update_device(
-    id: 'device id',
+    device_id: 'device id',
     params: {
         nickname: 'device name'
     }
@@ -65,7 +65,7 @@ You can send following list:
 ```ruby
 client.push_note(
     receiver: :device,
-    identifier: 'devide id',
+    id: 'target id',
     params: {
         title: 'Title',
         body: 'Content'
@@ -75,8 +75,8 @@ client.push_note(
 ### Sms
 ```ruby
 client.sens_sms(
-    user_identifier: 'user id',
-    device_identifier: 'device id',
+    user_id: 'user id',
+    device_id: 'device id',
     params: {
         conversation_iden: 'target phone number',
         message: 'Content'
