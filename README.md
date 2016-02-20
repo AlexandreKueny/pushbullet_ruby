@@ -1,14 +1,11 @@
 # PushbulletRuby
-
+[![Gem Version](https://badge.fury.io/rb/pushbullet_ruby.svg)](https://badge.fury.io/rb/pushbullet_ruby)
 ## Installation
-
 Add this line to your application's Gemfile:
-
 ```ruby
 gem 'pushbullet_ruby'
 ```
 ## Usage
-
 ### Setup
 Puts your api-key into a token.json file formatted like this:
 ```ruby
@@ -18,7 +15,6 @@ And setup your client:
 ```ruby
 client = PushbulletRuby::Client.new(PushbulletRuby::Token.load)
 ```
-
 ### List devices
 ```ruby
 client.devices
@@ -35,6 +31,18 @@ client.update_device(
 ### List contacts
 ```ruby
 client.contacts
+```
+### List chats
+```ruby
+client.chats
+```
+### Create chat
+```ruby
+client.create_chat(
+    params: {
+        email: 'target email'
+    }
+)
 ```
 ### List subscriptions(channels)
 ```ruby
@@ -76,10 +84,7 @@ client.sens_sms(
 )
 ```
 ## Contributing
-
 Bug reports and pull requests are welcome on GitHub at https://github.com/creends/pushbullet_ruby.
-
-
 ##### This gem is inspired by [washbullet](https://github.com/hrysd/washbullet)
 
 
