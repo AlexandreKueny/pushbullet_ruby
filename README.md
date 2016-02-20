@@ -1,4 +1,5 @@
 # PushbulletRuby
+[![Gem Version](https://badge.fury.io/rb/pushbullet_ruby.svg)](https://badge.fury.io/rb/pushbullet_ruby)
 ## Installation
 Add this line to your application's Gemfile:
 ```ruby
