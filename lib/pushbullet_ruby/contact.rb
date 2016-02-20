@@ -1,11 +1,11 @@
-require 'pushbullet_ruby/entity'
+require 'pushbullet_ruby/user'
 
 module PushbulletRuby
-  class Contact < Entity
+  class Contact < User
     def self.from_response(response)
-      response.body['contacts'].map do |attributes|
+      response.body['contacts'].each_with_object([]) do |attributes, memo|
         next unless attributes['active']
-        new(attributes)
+        memo << new(attributes)
       end
     end
 
