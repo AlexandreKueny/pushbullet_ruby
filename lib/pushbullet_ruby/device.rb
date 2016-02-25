@@ -1,4 +1,5 @@
 require 'pushbullet_ruby/entity'
+require 'pushbullet_ruby/api/devices'
 
 module PushbulletRuby
   class Device < Entity
@@ -7,6 +8,10 @@ module PushbulletRuby
         next unless attributes['active']
         memo << new(attributes)
       end
+    end
+
+    def update(client: nil, params: {})
+      client.update_device(device_id: self.id, params: params)
     end
 
     def id
