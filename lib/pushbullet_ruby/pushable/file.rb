@@ -12,7 +12,7 @@ module PushbulletRuby
               file_name: data['file_name'],
               file_type: data['file_type'],
               file_url:  data['file_url'],
-              body:      params['body'],
+              body:      params[:body],
               type:      type
           }
 
