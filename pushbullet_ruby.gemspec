@@ -6,12 +6,12 @@ require 'pushbullet_ruby/version'
 Gem::Specification.new do |spec|
   spec.name          = "pushbullet_ruby"
   spec.version       = PushbulletRuby::VERSION
-  spec.authors       = ["creends"]
-  spec.email         = "creends@outlook.com"
+  spec.authors       = ["Alexandre Kueny"]
+  spec.email         = "alexandre.kueny@hotmail.com"
 
   spec.summary       = nil
   spec.description   = "Ruby client of Pushbullet API"
-  spec.homepage      = "https://github.com/creends/pushbullet_ruby"
+  spec.homepage      = "https://github.com/AlexandreKueny/pushbullet_ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
